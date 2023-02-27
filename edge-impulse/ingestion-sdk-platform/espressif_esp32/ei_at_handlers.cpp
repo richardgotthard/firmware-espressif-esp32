@@ -335,7 +335,7 @@ bool at_stop_impulse(void)
 static bool at_get_wifi(void)
 {
     // TODO
-    /*
+    
     if !(dev->get_wifi_present_status()){
         ei_printf("No Wifi available for device");
         return false;
@@ -347,14 +347,14 @@ static bool at_get_wifi(void)
     ei_printf("MAC:       %s\n", dev->get_device_id());
     ei_printf("Connected: %d\n", dev->get_wifi_connection_status());
     ei_printf("Present:   %d\n", dev->get_wifi_present_status());
-    */
+    
     return true;
 }
 
 static bool at_set_wifi(const char **argv, const int argc)
 {
     // TODO
-    /*
+    
     ei_config_security_t security = (ei_config_security_t)atoi(argv[2]);
 
     EI_CONFIG_ERROR r = ei_config_set_wifi(argv[0], argv[1], security);
@@ -365,7 +365,7 @@ static bool at_set_wifi(const char **argv, const int argc)
     else {
         ei_printf("OK\n");
     }
-    */
+    
     return true;
 }
 
@@ -484,10 +484,10 @@ bool at_get_config(void)
 #endif
     ei_printf("Model type:       %s\r\n", model_type);
     ei_printf("\n");
-    // TO-DO NetworkDevice Interface
-    //ei_printf("===== WIFI =====\n");
-    //at_get_wifi();
-    //ei_printf("\n");
+    //TO-DO NetworkDevice Interface
+    ei_printf("===== WIFI =====\n");
+    at_get_wifi();
+    ei_printf("\n");
 
     ei_printf("===== WIFI =====\n");
     ei_printf("SSID:      \n");

@@ -20,24 +20,38 @@
  * SOFTWARE.
  */
 
-#ifndef EI_DEVICE_INTERFACE_H
-#define EI_DEVICE_INTERFACE_H
+#ifndef EI_NETWORK_DEVICE_INTERFACE_H
+#define EI_NETWORK_DEVICE_INTERFACE_H
 
-/* Function prototypes ----------------------------------------------------- */
-//TODO: remove as it is device specific and wil be superseded by AT Server
-void ei_command_line_handle(void);
+
+
+class EiNetworkDevice {
+private:
+
+    bool network_present;
+
+public:
+    EiNetworkDevice();
+
+    void ei_device_network_list_t(void);
+
+
+};
+///* Function prototypes ----------------------------------------------------- */
+//TODO: remove as it is device specific and will be superseded by AT Server
+// void ei_device_network_list_t(void);
 //TODO: redeclared in ei_device_lib.h
-bool ei_user_invoke_stop_lib(void);
+//bool ei_user_invoke_stop_lib(void);
 //TODO: do we need it in the FW SDK?
-void ei_serial_setup(void);
+//void ei_serial_setup(void);
 
 //TODO: remove as it is device specific
-void ei_write_strin g(char *data, int length);
+//void ei_write_string(char *data, int length);
 
 //TODO: move to a one header with all method requied by FW SDK
-void ei_putc(char cChar);
+//void ei_putc(char cChar);
 //TODO: move to a one header with all method requied by FW SDK
-char ei_getchar();
+//char ei_getchar();
 
 
-#endif /* EI_DEVICE_INTERFACE_H */
+#endif /* EI_NETWORK_DEVICE_INTERFACE_H */

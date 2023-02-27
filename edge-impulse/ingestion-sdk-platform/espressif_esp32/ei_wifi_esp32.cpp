@@ -20,7 +20,7 @@
  * SOFTWARE.
  */
 
-/*
+
 #include "firmware-sdk/ei_device_interface.h"
 
 #include "ei_wifi_esp32.h"
@@ -79,9 +79,10 @@ int8_t EiWifiESP32::scan_networks(ei_device_network_list_t **networks, uint16_t 
         networks[i]->signal_strength = ap_info[i].rssi;
 
         ESP_LOGI(TAG, "Auth mode \t\t%d", ap_info[i].authmode);
-        //networks[i]->wifi_security = ap_info[i].authmode;
+        networks[i]->wifi_security = ap_info[i].authmode;
 
         ESP_LOGI(TAG, "Channel \t\t%d\n", ap_info[i].primary);
+        //networks[i]->wifi_ = ap_info[i].primary; //newly implemented
     }
 
     return ret;
@@ -108,4 +109,3 @@ EiNetworkDevice *EiNetworkDevice::get_network_device()
     static EiWifiESP32 net;
     return &net;
 }
-*/

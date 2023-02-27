@@ -24,7 +24,7 @@
 #define EI_WIFI_ESP32
 
 /* Include ----------------------------------------------------------------- */
-/*
+
 #include "firmware-sdk/ei_network_device_interface.h"
 
 class EiWifiESP32 : public EiNetworkDevice {
@@ -48,5 +48,5 @@ public:
     int8_t send_sample(ei_config_t *config);
 
 };
-*/
+
 #endif

@@ -79,7 +79,7 @@ list(APPEND SOURCE_FILES ${INFERENCE_FILES})
 list(APPEND SOURCE_FILES ${QCBOR_FILES})
 list(APPEND SOURCE_FILES ${MBEDTLS_FILES})
 
-idf_component_register(SRCS "main.cpp" "${SOURCE_FILES}"
+idf_component_register(SRCS "i2cdev.c" "main.cpp" "${SOURCE_FILES}"
                        INCLUDE_DIRS "${include_dirs}")
 
 target_compile_options(${COMPONENT_LIB} PRIVATE -O3)
